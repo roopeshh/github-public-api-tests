@@ -1,16 +1,23 @@
 ## Prerequisites
 
-1. **Nodejs** should be installed. You can install the LTS version from here https://nodejs.org/en/.
-2. **Allure** should be installed for viewing the test results. You can install the latest version from here https://docs.qameta.io/allure/#_get_started.
-3. You will need a IDE/text editor like [VSCode](https://code.visualstudio.com/download)/[WebStorm](https://www.jetbrains.com/webstorm/download/) or similar to view/edit the code.
+1. **Docker** should be installed. You can install the latest version from [here](https://docs.docker.com/get-docker/).
+2. **Nodejs** should be installed. You can install the LTS version from [here](https://nodejs.org/en/).
+3. **Allure** should be installed for viewing the test results. You can install the latest version from [here](https://docs.qameta.io/allure/#_get_started).
+4. You will need a IDE/text editor like [VSCode](https://code.visualstudio.com/download)/[WebStorm](https://www.jetbrains.com/webstorm/download/) or similar to view/edit the code.
 
 ## How to run the tests locally
-- Update **_`src/config/local.env`_** with your github _username_ and _personal access token_.
-    - https://github.com/settings/tokens, you can generate one from your github account.
+- **To test with npm**: Update **_`src/config/local.env`_** with your github _username_ and _personal access token_.
+- **To test with docker**: Update **_`Dockerfile`_** with your github _username_ and _personal access token_.
+- You can generate _personal access token_ from your github account -> https://github.com/settings/tokens.
 
-### With Makefile
+### Test With Makefile (npm)
 1. Open the project folder (github-public-api-tests).
-2. Run command **_`make`_** on your command line. It will run the tests and opens the test results in the browser.
+2. Run **_`source src/config/local.env`_** to set environment variables on your command line.
+3. Run command **_`make npm`_** on your command line. It will run the tests and opens the allure test report in the browser.
+
+### Test With Makefile (docker)
+1. Open the project folder (github-public-api-tests).
+2. Run command **_`make docker`_** on your command line. It will run the tests on docker locally. Unfortunately, allure doesn't have official image yet for reports on docker.
 
 ### Other way
 1. Open the project folder (github-public-api-tests). 
