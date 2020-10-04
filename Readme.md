@@ -5,14 +5,19 @@
 3. You will need a IDE/text editor like [VSCode](https://code.visualstudio.com/download)/[WebStorm](https://www.jetbrains.com/webstorm/download/) or similar to view/edit the code.
 
 ## How to run the tests locally
+- Update **_`src/config/local.env`_** with your github _username_ and _personal access token_.
+    - https://github.com/settings/tokens, you can generate one from your github account.
 
+### With Makefile
+1. Open the project folder (github-public-api-tests).
+2. Run command **_`make`_** on your command line. It will run the tests and opens the test results in the browser.
+
+### Other way
 1. Open the project folder (github-public-api-tests). 
 2. Run **_`npm install`_** on your command line to install all the dependencies.
-3. Update **_`src/config/local.env`_** with your github _username_ and _personal access token_.
-    - https://github.com/settings/tokens, you can generate one from your github account.
-4. Run **_`source src/config/local.env`_** to set environment variables on your command line.
-5. To run the tests, run command **_`npm test`_**. You can check for the test results in the terminal.
-6. To see the test report run command **_`allure serve`_**. This opens test report in your browser.
+3. Run **_`source src/config/local.env`_** to set environment variables on your command line.
+4. To run the tests, run command **_`npm test`_**. You can check for the test results in the terminal.
+5. To see the test report run command **_`allure serve`_**. This opens test report in your browser.
 
 #### Note:
 - All the commands are run from folder **_github-public-api-tests_**.
